@@ -5,13 +5,13 @@ def call(String imageName) {
     echo "docker build -t $imageName ."
 //    sh "docker build -t $imageName ."
     echo "Image is build, pushing to docker hub"
-    sleep(2000)
+    sleep(2)
     echo "**"
-    sleep(2000)
+    sleep(2)
     echo "******"
-    sleep(2000)
+    sleep(2)
     echo "********"
-    sleep(2000)
+    sleep(2)
     echo "**********"
     echo "Image successfully deployed to dockerHub. :)"
 
