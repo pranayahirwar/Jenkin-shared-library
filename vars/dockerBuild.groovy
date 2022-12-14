@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-import functionPackage
+
 import com.example.Docker
 
 def call(String imageName) {
