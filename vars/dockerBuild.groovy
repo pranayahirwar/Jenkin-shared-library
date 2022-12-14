@@ -1,20 +1,9 @@
 #!/usr/bin/env groovy
+import functionPackage
+import functionPackage.Docker
 
 def call(String imageName) {
-    echo "Building docker image in $BRANCH_NAME"
-    echo "docker build -t $imageName ."
-//    sh "docker build -t $imageName ."
-    echo "Image is build, pushing to docker hub"
-    sleep(2)
-    echo "**"
-    sleep(2)
-    echo "******"
-    sleep(2)
-    echo "********"
-    sleep(2)
-    echo "**********"
-    echo "Image successfully deployed to dockerHub. :)"
-
+    return new Docker(this).dockerbuildImage(imageName)
 //     withCredentials([usernamePassword(credentialsId: 'dockerHubCred', usernameVariable:'USER', passwordVariable:'PSD')]) {
 //         sh "echo $PSD | docker login -u $USER --password-stdin "
 //         sh "docker push $imageName"
